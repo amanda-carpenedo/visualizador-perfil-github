@@ -147,7 +147,7 @@ main {
   align-items: center;
   gap: 2rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 510px;
   padding: 2rem;
   border-radius: var(--radius);
 }
@@ -168,7 +168,6 @@ main {
 }
 
 .profile-info h2 {
-  margin: 0 0 0.25rem 0;
   font-size: var(--font-2xl);
   font-weight: 700;
 }
@@ -180,9 +179,43 @@ main {
 }
 
 
-.profile-results h2{
-   font-size: varvar(--font-sm);
+.profile-results h2 {
+  font-size: varvar(--font-sm);
 }
+
+.profile-counter {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin: 80px 0;
+}
+
+.profile-counter h4 {
+  font-weight: normal;
+  font-size: 0.74rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.profile-counter span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Responsivo: empilha em telas pequenas */
