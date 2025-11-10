@@ -1,4 +1,4 @@
-import { fetchGithubUser } from "./githubApi.js";
+import { fetchGithubUser, fetchGithubUserRepos } from "./githubApi.js";
 import { renderProfile } from "./profileView.js";
 
 const inputSearch = document.getElementById('input-search');
@@ -17,7 +17,8 @@ btnSearch.addEventListener('click', async () => {
 
     try {
         const userData = await fetchGithubUser(userName)
-        renderProfile(userData, profileResults);
+        const userRepos = await fetchGithubUserRepos(userName)
+        renderProfile(userData, userRepos, profileResults);
     }catch (error) {
     console.log('Erro na requisição', error);
     profileResults.innerHTML = "<h2>Houve um erro na sua busca 😥</h2>"
