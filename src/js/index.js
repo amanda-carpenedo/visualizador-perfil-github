@@ -6,6 +6,16 @@ const btnSearch = document.getElementById('btn-search');
 const profileResults = document.querySelector('.profile-results');
 
 btnSearch.addEventListener('click', async () => {
+    await handleSearch();
+})
+
+inputSearch.addEventListener('keydown', async (event) => {
+    if (event.key === 'Enter') {
+        await handleSearch();
+    }
+});
+
+async function handleSearch() {
     const userName = inputSearch.value;
 
     if (!userName || userName.trim().length === 0) {
@@ -23,6 +33,6 @@ btnSearch.addEventListener('click', async () => {
     console.log('Erro na requisição', error);
     profileResults.innerHTML = "<h2>Houve um erro na sua busca 😥</h2>"
 }
-})
+}
 
 
